@@ -54,6 +54,20 @@ export class QuizzComponent implements OnInit {
     this.answers.push(value)
 
     //Imprimindo o valor armanezado conforme o user seleciona as opções.
-      console.log(this.answers);
+      //console.log(this.answers);
+    
+    this.nextStep()
+  }
+
+  //Essa função será responsável para exibir a proximá pergunta, tendo em vista quepode havé mais de uma pergunta e ainda apliação não insere a proxima pergunta.
+  async nextStep() {
+    this.questionIndex += 1
+    
+    if (this.questionMaxIndex > this.questionIndex) {
+      this.questionSelected = this.questions[this.questionIndex]
+    } else {
+      this.finished = true
+    }
+    //Até aqui o que apenas falta é importar essa função em playerChoose() para que sempre que ela ser chamada, essa função ser executada.
   }
 }
