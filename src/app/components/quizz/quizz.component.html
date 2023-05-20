@@ -2,22 +2,28 @@
   <div class="quizz__logo">
     <img src="../../../assets/img/logo.png" 
     alt="Logo BuzzFeed">
-    <h3>Titulo</h3>
+    <h3>{{titleQuizz}}</h3>
   </div>
   
   <div class="quizz__questions">
-    <h3>Questão Selecionada</h3>
+    <h3>{{questionSelected}}</h3>
   </div>
   
   <div class="quizz__options">
     <button 
       class="quizz___btn-option">
-      Nome Opção
+      {{buttonQuizz}}
     </button>
   </div>
-  
-  <div class="quizz__results">
-    <h1>O seu Resultado é:</h1>
-    <p>Resposta Selecionada</p>
+  <!-- Com o uso da diretiva *ngIf por padrão de vizualiação vem true. Quando false, deixa de exibir na tela. -->
+  <div class="quizz__results"
+  *ngIf="finished"
+  >
+    <h1>
+      {{resultsQuizz}}
+    </h1>
+    <p>
+      {{respostQuizz}}
+    </p>
   </div>
 </div>
