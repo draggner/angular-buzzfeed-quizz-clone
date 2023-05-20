@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import quizz_questions from '../../data/quizz_questions.json';
+
 @Component({
   selector: 'app-quizz',
   templateUrl: './quizz.component.html',
@@ -7,13 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuizzComponent implements OnInit {
   //Variaveis dinâmicas para o quizz.component.html
-  titleQuizz: string = "Titulo Segundario"
-  buttonQuizz: string = "Opções"
-  resultsQuizz: string = "O seu resultado é:"
-  respostQuizz: string = "Resposta Selecionada"
+    titleQuizz: string = ""
+    buttonQuizz: string = "Opções"
+    resultsQuizz: string = "O seu resultado é:"
+    respostQuizz: string = "Resposta Selecionada"
 
   questions: any
-  questionSelected: any = "Pergunta Selecionada"
+  questionSelected: any = ""
 
   //Armazenar a respostas do user
     answers: string[] = []
@@ -29,6 +31,15 @@ export class QuizzComponent implements OnInit {
   
 
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    if (quizz_questions) {
+      this.finished = false
+
+      //Mapeando as propriedades do objeto que estão importadas.
+      this.titleQuizz = quizz_questions.title
+
+      this.questions = quizz_questions.questions
+
+      this.questionSelected = this.questions[this.questionIndex]
+    }
   }
 }
