@@ -40,6 +40,12 @@ export class QuizzComponent implements OnInit {
       this.questions = quizz_questions.questions
 
       this.questionSelected = this.questions[this.questionIndex]
+
+      this.questionIndex = 0
+      this.questionMaxIndex = this.questions.length
+      //Ao imprimir esses valores no console.log será exibido a quantidade de questão inicial e final do arquivo JSON.
+        console.log(this.questionIndex);
+        console.log(this.questionMaxIndex);
     }
   }
 }
