@@ -10,9 +10,9 @@ import quizz_questions from '../../data/quizz_questions.json';
 export class QuizzComponent implements OnInit {
   //Variaveis dinâmicas para o quizz.component.html
     titleQuizz: string = ""
-    buttonQuizz: string = ""
-    resultsQuizz: string = "O seu resultado é:"
-    respostQuizz: string = "Resposta Selecionada"
+    // buttonQuizz: string = ""
+    // resultsQuizz: string = "O seu resultado é:"
+    // respostQuizz: string = "Resposta Selecionada"
 
   questions: any
   questionSelected: any = ""
@@ -66,8 +66,31 @@ export class QuizzComponent implements OnInit {
     if (this.questionMaxIndex > this.questionIndex) {
       this.questionSelected = this.questions[this.questionIndex]
     } else {
+      const finalAnswer:string = await this.checkResult(this.answers)
+
       this.finished = true
+
+      //6.1
+      this.answerSelected = quizz_questions.results[finalAnswer as keyof typeof quizz_questions.results]
     }
-    //Até aqui o que apenas falta é importar essa função em playerChoose() para que sempre que ela ser chamada, essa função ser executada.
+    //Até aqui o que apenas falta é importar essa função em playerChoose() para que sempre que ela ser chamada, essa função ser executada. 
+
+  }
+  //Função responsavel por fazer toda a logica que dependendo do resultado com base nas opções do user será exibido a tela final.
+  async checkResult(answers: string[]) {
+    const result = answers.reduce((previous, current, i, arr) => {
+      if (
+        arr.filter(item => item === previous).length >
+        arr.filter(item => item === current).length
+      ) {
+        return previous
+      } else {
+        return current
+      }
+    })
+    //6 Inserindo essa função dentro do nextStep() para chegar os valores armanezados e decidir qual resultado será exposto no final do questionario.
+
+    //NÃO ESQUECE DE RETORNAR ESSE RESULTADO, NOSSA VEY, MINHA APLICAÇÃO DANDO ERRANDO POR CAUSA DISSO:
+    return result
   }
 }
