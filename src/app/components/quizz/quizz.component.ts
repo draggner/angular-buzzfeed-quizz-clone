@@ -48,4 +48,12 @@ export class QuizzComponent implements OnInit {
         console.log(this.questionMaxIndex);
     }
   }
+
+  //Criando uma função que vai armanezar o valor do user e empurrar essas informações das opções para manipular o resultado final.
+  playerChosse(value: string){
+    this.answers.push(value)
+
+    //Imprimindo o valor armanezado conforme o user seleciona as opções.
+      console.log(this.answers);
+  }
 }

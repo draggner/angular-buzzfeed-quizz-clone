@@ -12,7 +12,9 @@
   <div class="quizz__options">
     <button 
       class="quizz___btn-option"
-      *ngFor="let optionQuizz of questionSelected.options">
+      *ngFor="let optionQuizz of questionSelected.options"
+      (click)="playerChosse(optionQuizz.alias)"
+      >
       {{optionQuizz.name}}
     </button>
   </div>
