@@ -10,7 +10,7 @@ import quizz_questions from '../../data/quizz_questions.json';
 export class QuizzComponent implements OnInit {
   //Variaveis dinâmicas para o quizz.component.html
     titleQuizz: string = ""
-    buttonQuizz: string = "Opções"
+    buttonQuizz: string = ""
     resultsQuizz: string = "O seu resultado é:"
     respostQuizz: string = "Resposta Selecionada"
 

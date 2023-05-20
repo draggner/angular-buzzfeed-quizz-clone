@@ -8,11 +8,12 @@
   <div class="quizz__questions">
     <h3>{{questionSelected.question}}</h3>
   </div>
-  
+  <!-- Para ser exibido as opções do botão, com o uso da diretiva *ngFor que percorre todo o objeto do JSON e exibir na tela. -->
   <div class="quizz__options">
     <button 
-      class="quizz___btn-option">
-      {{buttonQuizz}}
+      class="quizz___btn-option"
+      *ngFor="let optionQuizz of questionSelected.options">
+      {{optionQuizz.name}}
     </button>
   </div>
   <!-- Com o uso da diretiva *ngIf por padrão de vizualiação vem true. Quando false, deixa de exibir na tela. -->
