@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 
-body{
-  color: antiquewhite;
-  background-color: #1F1147;
+body {
+  color: rgb(238, 222, 201);
+  background-color: #0e0d10;
+  font-family: 'Poppins', sans-serif;
 }
