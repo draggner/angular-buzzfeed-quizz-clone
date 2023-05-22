@@ -6,7 +6,7 @@ Esse Projeto foi gerado com[Angular CLI](https://github.com/angular/angular-cli)
 <h2 align="center"><img src="./src/assets/potência-tech-angular-developer-powered-by-iFood.webp" width="250px"></h2>
 
 <p align="center">
-<a href="#-introducao">📜 Introdução</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="#-introdução">📜 Introdução</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 <a href="#-tecnologias">🚀 Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 <a href="#-documentação">📝 Documentação</a>
 </p>
