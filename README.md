@@ -6,12 +6,12 @@ Esse Projeto foi gerado com[Angular CLI](https://github.com/angular/angular-cli)
 <h2 align="center"><img src="./src/assets/potência-tech-angular-developer-powered-by-iFood.webp" width="250px"></h2>
 
 <p align="center">
-<a href="#-introdução">📜 Introdução</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="#-introducao">📜 Introdução</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 <a href="#-tecnologias">🚀 Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 <a href="#-documentação">📝 Documentação</a>
 </p>
 
-# 📜Introdução
+## 📜Introdução
 Este projeto é resultado do Desafio de Projeto: Criando Buzzfeed com Angular, na plataforma da DIO.me! Esse projeto teve como objetivo de compreender os conceitos transmitidos sob as orientações de [Felipe Aguiar](https://github.com/felipeAguiarCode), embarquei em uma jornada de aprendizado que superou minhas expectativas. Embora seja um projeto aparentemente simples, esconde uma lógica fascinante e se revela uma ferramenta incrível para estudos.
 
 Assisti atentamente às orientações do Felipe, anotando cada conceito e absorvendo o conhecimento necessário para construir o projeto do zero. A experiência de refazer a aplicação por completo foi desafiadora, mas extremamente gratificante.  Foi uma oportunidade de consolidar meu entendimento em Angular e explorar as melhores práticas de desenvolvimento.
