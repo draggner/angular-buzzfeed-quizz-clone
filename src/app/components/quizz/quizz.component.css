@@ -10,6 +10,11 @@
   align-items: center;
 }
 
+.quizz__logo > h1{
+  font-size: 110px;
+  color: rgb(223, 135, 12);
+}
+
 .quizz__logo > img{
   margin-top: 20px;
   margin-bottom: 10px;
